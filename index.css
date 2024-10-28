@@ -1,0 +1,420 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1e293b;
+    height: 100vh;
+}
+
+#phoro {
+    position: absolute;
+    z-index: -1;
+    height: 90vh;
+    background: linear-gradient(#3070d8, 20%, #1e293b00);
+}
+
+#user-phoro {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center; 
+    opacity: 0.5;
+}
+
+#info-container {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    gap: 0.4rem;
+}
+
+#title-container {
+    background: #59709977;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #a6c1f0;
+    border-bottom: 1px solid #7691c0;
+}
+
+#title-second-container {
+    display: inline-block;
+}
+
+#title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: white;
+    padding-right: 0.3rem;
+    border-right: 4px solid white;
+    width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.5s steps(18) 0.5s forwards,
+    cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 0 2rem;
+}
+
+#description {
+    padding: 0 2rem;
+    font-size: 1.3rem;
+}
+
+#repository-container {
+    padding: 0 2rem;
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+#second-title-container {
+    display: inline-block;
+}
+
+#second-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+    width: 0;
+    animation: secondTitleAnimation 1s ease 2.1s forwards;
+}
+
+@keyframes secondTitleAnimation{
+    to{
+        width: 100%;
+    }
+}
+
+.repository {
+    width: 70%;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    opacity: 0;
+}
+
+
+#list-repository {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.first-repository {
+    display: flex;
+    flex-direction: row;
+}
+
+.first {
+    animation: firstRepository 0.5s ease forwards;
+
+}
+
+@keyframes firstRepository {
+    to {
+        opacity: 1;
+        transform: translateX(80%);
+    }
+}
+
+.second-repository {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.second {
+    animation: secondRepository 0.5s ease forwards;
+}
+
+@keyframes secondRepository {
+    to {
+        opacity: 1;
+        transform: translateX(-80%);
+    }
+}
+
+.repository-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.repository-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contacts-icons {
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+.contacts-icons:hover {
+    transform: scale(1.2);
+}
+
+#contact-info-container {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 10% 0.6rem 10%;
+    background-color: #59709977;
+    border-top: 2px solid #9ab5e4;
+}
+
+.technology-icons {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.technology-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.8rem;
+    padding: 0 5%;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+    transition: all 0.4s ease;
+}
+
+::-webkit-scrollbar-track {
+    background: #cdd5e9;
+    border-radius: 1rem; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3264b6;
+    border-radius: 1rem;
+    border: 2px solid #d9e8ec;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2a497a; 
+}
+
+#contact-btn {
+    position: fixed;
+    top: 5%;
+    right: 15%;
+    z-index: 10;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 2rem;
+    background-color: #3070d8;
+    color: white;
+    padding: 0.3rem;
+    box-shadow: 0 0 8px 2px rgb(153, 180, 199);
+    transition: all 0.3s ease;
+    animation: shadowVariation 2.5s alternate infinite;
+}
+#contact-btn:hover {
+    transform: scale(1.2);
+}
+#contact-btn:active {
+    transform: scale(1);
+    background-color: #314c77;
+}
+
+@keyframes shadowVariation {
+    50% {
+        box-shadow: 0 0 9px 6px rgb(153, 180, 199);
+    }
+    100% {
+        box-shadow: 0 0 6px 4px rgb(153, 180, 199);
+    }
+}
+
+#contact-icon {
+    padding: 0.2rem;
+}
+
+/* animacion de div ligth */
+#ligth {
+    width: 0.5rem;
+    height: 0.2rem;
+    transform: scale(0);
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px 7px white;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    animation: ligthMovement 1s ease-in-out 0.6s forwards,
+    secondLigthMovement 0.6s ease-in 1.6s forwards;
+}
+
+@keyframes ligthMovement {
+    0% {
+        right: 10%;
+        transform: scale(0.1);
+        width: 0.5rem;
+    }
+    50% {
+        width: 2rem;
+    }
+    100% {
+        right: 93%;
+        transform: scale(0.9);
+        width: 0.5rem;
+    }
+}
+
+@keyframes secondLigthMovement {
+    99% {
+        height: 2.5rem;
+        top: 90%;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 1.1;
+    }
+}
+
+@media (min-width: 500px) {
+
+    #phoro {
+        height: 100vh;
+    }
+
+    .technology-icons {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .repository {
+        width: 60%;
+    }
+    
+}
+
+@media (min-width: 768px) {
+
+    #description {
+        padding: 0 4rem;
+    }
+
+    .repository {
+        width: 55%;
+    }
+
+    #repository-container {
+        padding: 0 4rem;
+    }
+
+    #contact-info-container {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    #info-container {
+        margin: 0 5% 0 25%;
+    }
+
+    #title-container {
+        background: linear-gradient( to left, rgba(0, 0, 0, 0), #718cbb77, rgba(0, 0, 0, 0));
+        border: none;
+    }
+
+    .technology-icons {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    @keyframes ligthMovement {
+        0% {
+            right: 10%;
+            transform: scale(0.1);
+            width: 0.5rem;
+        }
+        50% {
+            width: 2rem;
+        }
+        100% {
+            right: 83%;
+            transform: scale(0.9);
+            width: 0.5rem;
+        }
+    }
+
+    #info-container {
+        margin: 0 8% 0 35%;
+        padding-top: 8rem;
+        height: 92vh;
+    }
+
+    #phoro {
+        margin-top: 4%;
+        margin-left: 8%;
+    }
+
+    .technology-icons-container {
+        padding: 0 10%;
+    }
+
+    .technology-icons {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #contact-info-container {
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+}
