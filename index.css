@@ -160,7 +160,7 @@ body {
 @keyframes firstRepository {
     to {
         opacity: 1;
-        transform: translateX(80%);
+        transform: translateX(40%);
     }
 }
 
@@ -176,7 +176,7 @@ body {
 @keyframes secondRepository {
     to {
         opacity: 1;
-        transform: translateX(-80%);
+        transform: translateX(-40%);
     }
 }
 
@@ -372,6 +372,20 @@ body {
     .technology-icons {
         width: 2.6rem;
         height: 2.6rem;
+    }
+
+    @keyframes firstRepository {
+        to {
+            opacity: 1;
+            transform: translateX(70%);
+        }
+    }
+
+    @keyframes secondRepository {
+        to {
+            opacity: 1;
+            transform: translateX(-70%);
+        }
     }
 }
 
